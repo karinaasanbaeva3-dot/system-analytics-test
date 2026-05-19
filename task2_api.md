@@ -1,14 +1,14 @@
 # Задание 2: Проектирование API
 
-## Часть 1: Пример REST API запроса
+## Пример REST API запроса
 
 GET /api/v1/partner-shops
 
-Headers:
+**Headers:**
 - Authorization: Bearer token
 - Accept-Language: ru
 
-## Часть 2: Пример ответа REST API (JSON)
+## Пример ответа REST API (JSON)
 
 {
   "shops": [
