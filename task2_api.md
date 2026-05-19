@@ -14,21 +14,27 @@ Headers:
   "shops": [
     {
       "id": "1",
-      "name": "Магазин у дома",
-      "address": "ул. Ленина, 15",
-      "distance_km": 1.2,
-      "rating": 4.7,
-      "external_url": "https://example.com/shop1",
-      "work_hours": "09:00-21:00"
+      "name": "METRO",
+      "delivery_info": "Ближайшая доставка сегодня 21:00–23:00",
+      "external_url": "https://metro.ru/petrushka"
     },
     {
       "id": "2",
-      "name": "Супермаркет Ромашка",
-      "address": "пр. Мира, 88",
-      "distance_km": 2.5,
-      "rating": 4.2,
-      "external_url": "https://example.com/shop2",
-      "work_hours": "08:00-23:00"
+      "name": "Ашан",
+      "delivery_info": "Ближайшая доставка сегодня 18:00–20:00",
+      "external_url": "https://ashan.ru/petrushka"
+    },
+    {
+      "id": "3",
+      "name": "ВкусВилл",
+      "delivery_info": "Быстрая доставка от 20 до 60 минут",
+      "external_url": "https://vkusvill.ru/petrushka"
+    },
+    {
+      "id": "4",
+      "name": "ВИКТОРИЯ",
+      "delivery_info": "Ближайшая доставка сегодня 17:00–19:00",
+      "external_url": "https://victoria.ru/petrushka"
     }
   ]
 }
@@ -37,22 +43,19 @@ Headers:
 
 | Поле | Тип | Описание |
 |------|-----|----------|
-| id | string | ID магазина |
-| name | string | Название |
-| address | string | Адрес |
-| distance_km | float | Расстояние в км |
-| rating | float | Рейтинг 0-5 |
-| external_url | string | Ссылка для перехода |
-| work_hours | string | Часы работы |
+| id | string | Уникальный идентификатор магазина |
+| name | string | Название магазина (METRO, Ашан и т.д.) |
+| delivery_info | string | Информация о доставке (из макета) |
+| external_url | string | Ссылка на внешний ресурс (открывается при клике) |
 
 ## Примечание
 
-При клике на плашку магазина открывается external_url.
+При клике на плашку магазина открывается external_url во внешнем браузере или WebView.
 
-## Ошибка авторизации
+## Пример ответа при ошибке
 
 {
   "status": "error",
   "code": 401,
-  "message": "Недействительный токен"
+  "message": "Недействительный токен авторизации"
 }
